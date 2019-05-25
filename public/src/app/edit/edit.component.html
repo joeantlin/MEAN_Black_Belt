@@ -1,0 +1,78 @@
+<h2>Edit this pet</h2>
+
+<form>
+  <!-- {{ petEdits | json  }} -->
+  <label>
+    <p>Name</p>
+      <input
+      type="text"
+      name="name"
+      [(ngModel)]="petEdits.name"
+      required
+      minlength='3'
+      maxlength='45'
+      #thename="ngModel">
+      <span class="error"
+      *ngIf="thename.invalid">
+        <p *ngIf="thename.errors.required">Name Required</p>
+        <p *ngIf="thename.errors.minlength">Name is too short</p>
+      </span>
+  </label>
+  <label>
+    <p>Pet Type</p>
+      <input
+      type="text"
+      name="type"
+      [(ngModel)]="petEdits.type"
+      required
+      minlength='3'
+      maxlength='45'
+      #type="ngModel">
+      <span class="error"
+      *ngIf="type.invalid">
+        <p *ngIf="type.errors.required">Type Required</p>
+        <p *ngIf="type.errors.minlength">Type is too short</p>
+      </span>
+  </label>
+  <label>
+    <p>Description</p>
+      <textarea
+      type="text"
+      name="description"
+      [(ngModel)]="petEdits.description"
+      required
+      minlength='3'
+      maxlength='45'
+      #desc="ngModel">
+      </textarea>
+      <span class="error"
+      *ngIf="desc.invalid">
+        <p *ngIf="desc.errors.required">Description Required</p>
+        <p *ngIf="desc.errors.minlength">Description is too short</p>
+      </span>
+  </label>
+  <label><b>Edit Skills</b></label>
+  <label>
+    Skill 1
+      <input
+      type="text"
+      name="skillone"
+      [(ngModel)]="petEdits.skills.skillone">
+  </label>
+  <label>
+    Skill 2
+      <input
+      type="text"
+      name="skilltwo"
+      [(ngModel)]="petEdits.skills.skilltwo">
+  </label>
+  <label>
+    Skill 3
+      <input
+      type="text"
+      name="skillthree"
+      [(ngModel)]="petEdits.skills.skillthree">
+  </label>
+  <button *ngIf="thename.valid && type.valid && desc.valid" (click)="editPet()">Update</button>
+  <button [routerLink]="['']">Cancel</button>
+</form>

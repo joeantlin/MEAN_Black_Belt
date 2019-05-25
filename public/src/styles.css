@@ -1,0 +1,133 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  padding: 0px;
+  margin: 0px;
+  /* border: red dashed 0.1px; */
+}
+
+p, th, td, li, h1, h2, h3, h4, label{
+  margin-bottom: 5px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+p, li {
+  padding: 5px 10px;
+}
+
+h1, h2, h3, h4, label {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+form, table {
+  margin: 20px 10px;
+}
+
+a {
+  color: rgb(39, 175, 230);
+  text-decoration-line: none;
+}
+  a:hover {
+      text-decoration-line: underline;
+  }
+
+/*        TABLES       */
+  table {
+      margin-left: auto;
+      margin-right: auto;
+      background-color: rgba(240, 239, 239, 0.5);
+      border-radius: 10px;
+      border-spacing: 0px;
+  }
+  th, td {
+      padding: 10px 20px;
+      border: none;
+  }
+      tr:nth-child(even) {
+          background-color: rgb(240, 239, 239);
+      }
+      tr:first-child {
+          background-color: rgb(39, 175, 230);
+          border-radius: 40px;
+      }
+          tr:first-child th:first-child{
+              border-radius: 10px 0px 0px 0px;
+          }
+          tr:first-child th:last-child{
+              border-radius: 0px 10px 0px 0px;
+          }
+
+
+/*         FORM         */
+form, div {
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background-color: rgba(240, 239, 239, 0.5);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+label {
+  display: block;
+  font-weight: normal;
+  padding-bottom: 5px;
+  padding-top: 0px;
+}
+input, select, button, a[class=button], textarea {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 10px auto 5px auto;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: none;
+}
+input[type=submit] {
+  background-color: rgb(39, 175, 230);
+  color: white;
+  font-size: 15px;
+  border-radius: 10px;
+  width: 150px;
+}
+  input[type=submit]:hover {
+      background-color: rgb(15, 135, 182);
+  }
+button, a[class=button] {
+  background-color: white;
+  color: rgb(39, 175, 230);
+  font-size: 15px;
+  border: solid 1px rgb(39, 175, 230);
+  border-radius: 10px;
+  width: 150px;
+}
+  button:hover, a[class=button]:hover {
+      background-color:rgb(39, 175, 230);
+      color: white;
+      text-decoration-line: none;
+  }
+
+a[class=button] {
+  padding-top: 10px;
+  text-align: center;
+}
+textarea {
+  height: 80px;
+}
+
+.error {
+  height: 20px;
+  box-sizing: border-box;
+}
+.error p{
+  font-size: 10px;
+}
+
+li {
+  margin-left: 40px;
+}
+
